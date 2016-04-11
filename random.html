@@ -1,0 +1,119 @@
+
+
+<html>
+	<head>
+	   <style>
+            #add{
+                list-style-type: none;
+            }
+       </style>
+	</head>
+	<body>
+		 
+    	
+												
+            
+          
+
+<script>
+                
+              
+								
+function addNums(){
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    var answer = document.getElementById("answer").value;   
+
+	var digit1 = parseInt(document.getElementById("digit1").innerHTML);
+
+	var digit2 = parseInt(document.getElementById("digit2").innerHTML);
+
+	var sum = digit1 + digit2;
+
+
+       
+
+	
+	if(answer == ""){
+
+		
+
+	}else if(answer != sum){
+
+		
+             
+            
+            event.preventDefault();
+             document.getElementById("status").innerHTML = "Please try again";
+             
+             randomNums();
+             
+             return false;
+             
+             
+          
+        
+
+	}else{
+
+		document.getElementById("status").innerHTML = "Nice work";
+
+		return true;
+
+	}
+
+	
+
+	
+
+}
+
+function randomNums(){
+
+	var rand_num1 = Math.floor(Math.random() * 10) + 1;
+
+	var rand_num2 = Math.floor(Math.random() * 10) + 1;
+
+	document.getElementById("digit1").innerHTML = rand_num1;
+
+	document.getElementById("digit2").innerHTML = rand_num2;
+
+}
+            </script>
+            
+<body onload="randomNums();">
+                
+
+<strong>Please add these numbers</strong>
+<ul id="add">
+
+<li><div id="digit1"></div></li>
+                <li>+</li>
+
+                <li><div id="digit2"></div></li>
+                <li>=</li>
+                
+                <li><input type="text" id="answer" required/></li>
+                </ul>
+
+
+
+<div id="status"></div>
+                
+ 
+<br>
+            
+           
+<input type="submit" value="Submit" onclick="addNums();" />
+													
+</form>
+									
+															
+							
+</section>
+
+							
+	
+       
+	</body>
+</html>
